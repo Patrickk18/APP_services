@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: producer
+  namespace: paradigma
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: producer
+  template:
+    metadata:
+      labels:
+        app: producer
+    spec:
+      containers:
+      - name: producer
+        image: producer:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        # CAMBIO CLAVE: Apuntamos al nuevo nombre
+        - name: KAFKA_BOOTSTRAP_SERVERS
+          value: "kafka-svc:9092"
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
