@@ -118,7 +118,7 @@
 
  ## 📝 Autor
  Desarrollado como parte del proyecto de **Arquitectura de Servicios**.
- -- Franklin Pelaez
- -- Miguel Trejo
- -- Patrick Peralta
+ * Franklin Pelaez
+ * Miguel Trejo
+ * Patrick Peralta
  
