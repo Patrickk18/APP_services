@@ -115,6 +115,7 @@
  * **Librería Kafka:** `kafka-python`
 
  ---
-#
-# ## 📝 Autor
-# Desarrollado como parte del proyecto de **Arquitectura de Servicios**.
+
+ ## 📝 Autor
+ Desarrollado como parte del proyecto de **Arquitectura de Servicios**.
+ 
