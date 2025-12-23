@@ -9,6 +9,11 @@
 
  Este repositorio contiene la implementación de una **Arquitectura Orientada a Eventos (EDA)** y de Procesamiento de Datos Híbrido. El sistema integra microservicios desarrollados en Python, un bus de mensajería Apache Kafka y orquestación de datos con Apache NiFi, todo desplegado sobre un clúster local de **Kubernetes**.
 
+ ## 📝 Autores
+ Desarrollado como parte del proyecto de **Arquitectura de Servicios**.
+ * Franklin Pelaez
+ * Miguel Trejo
+ * Patrick Peralta
  ---
 
  ## 🏗️ Arquitectura del Sistema
@@ -115,10 +120,3 @@
  * **Librería Kafka:** `kafka-python`
 
  ---
-
- ## 📝 Autor
- Desarrollado como parte del proyecto de **Arquitectura de Servicios**.
- * Franklin Pelaez
- * Miguel Trejo
- * Patrick Peralta
- 
