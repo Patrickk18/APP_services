@@ -6,10 +6,10 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8080
-    targetPort: 8080
-    nodePort: 30080
-    name: http
+  - port: 8443            # CAMBIO 1: Apuntamos al puerto seguro
+    targetPort: 8443
+    nodePort: 30443       # (Opcional) Cambiamos el NodePort
+    name: https
   selector:
     app: nifi
 ---
@@ -32,7 +32,11 @@ spec:
       - name: nifi
         image: apache/nifi:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8443  # CAMBIO 2: El contenedor expone 8443
         env:
-        - name: NIFI_WEB_HTTP_PORT
-          value: "8080"
+        - name: NIFI_WEB_HTTPS_PORT
+          value: "8443"
+        - name: NIFI_WEB_HTTPS_HOST
+          value: "0.0.0.0"     # Importante para que escuche conexiones externas
+        - name: NIFI_WEB_PROXY_HOST
+          value: "localhost:8443" # CAMBIO 3: La corrección para tu error de acceso
